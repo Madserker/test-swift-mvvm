@@ -17,6 +17,23 @@
 		CE983EBA274911980012C026 /* BitpandaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EB9274911980012C026 /* BitpandaUITests.swift */; };
 		CE983EBC274911980012C026 /* BitpandaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EBB274911980012C026 /* BitpandaUITestsLaunchTests.swift */; };
 		CE983ECC274913A10012C026 /* Mastrerdata.json in Resources */ = {isa = PBXBuildFile; fileRef = CE983ECB274913A10012C026 /* Mastrerdata.json */; };
+		CE983ED2274936D40012C026 /* AssetsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983ED0274936D40012C026 /* AssetsScreenViewController.swift */; };
+		CE983ED3274936D40012C026 /* AssetsScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE983ED1274936D40012C026 /* AssetsScreenViewController.xib */; };
+		CE983ED6274937040012C026 /* WalletsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983ED4274937040012C026 /* WalletsScreenViewController.swift */; };
+		CE983ED7274937040012C026 /* WalletsScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE983ED5274937040012C026 /* WalletsScreenViewController.xib */; };
+		CE983ED92749532A0012C026 /* AssetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983ED82749532A0012C026 /* AssetsViewModel.swift */; };
+		CE983EDB2749536C0012C026 /* WalletsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EDA2749536C0012C026 /* WalletsViewModel.swift */; };
+		CE983EE4274957BD0012C026 /* MastrerDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EE3274957BD0012C026 /* MastrerDataService.swift */; };
+		CE983EE627495A1D0012C026 /* CodableModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EE527495A1D0012C026 /* CodableModels.swift */; };
+		CE983EE827495A3B0012C026 /* Commodity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EE727495A3B0012C026 /* Commodity.swift */; };
+		CE983EEA27495A550012C026 /* Fiat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EE927495A550012C026 /* Fiat.swift */; };
+		CE983EEC27495A5F0012C026 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EEB27495A5F0012C026 /* Wallet.swift */; };
+		CE983EEE27495A780012C026 /* CommodityWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EED27495A780012C026 /* CommodityWallet.swift */; };
+		CE983EF027495A840012C026 /* FiatWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EEF27495A840012C026 /* FiatWallet.swift */; };
+		CE983EF227495F8B0012C026 /* DataRetrieverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EF127495F8B0012C026 /* DataRetrieverService.swift */; };
+		CE983EF6274968D40012C026 /* AssetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EF4274968D40012C026 /* AssetsTableViewCell.swift */; };
+		CE983EF7274968D40012C026 /* AssetsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE983EF5274968D40012C026 /* AssetsTableViewCell.xib */; };
+		CE983EF827496B300012C026 /* Mastrerdata.json in Sources */ = {isa = PBXBuildFile; fileRef = CE983ECB274913A10012C026 /* Mastrerdata.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +68,22 @@
 		CE983EB9274911980012C026 /* BitpandaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitpandaUITests.swift; sourceTree = "<group>"; };
 		CE983EBB274911980012C026 /* BitpandaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitpandaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE983ECB274913A10012C026 /* Mastrerdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Mastrerdata.json; path = Bitpanda/Resources/Mastrerdata.json; sourceTree = SOURCE_ROOT; };
+		CE983ED0274936D40012C026 /* AssetsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsScreenViewController.swift; sourceTree = "<group>"; };
+		CE983ED1274936D40012C026 /* AssetsScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssetsScreenViewController.xib; sourceTree = "<group>"; };
+		CE983ED4274937040012C026 /* WalletsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsScreenViewController.swift; sourceTree = "<group>"; };
+		CE983ED5274937040012C026 /* WalletsScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletsScreenViewController.xib; sourceTree = "<group>"; };
+		CE983ED82749532A0012C026 /* AssetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsViewModel.swift; sourceTree = "<group>"; };
+		CE983EDA2749536C0012C026 /* WalletsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsViewModel.swift; sourceTree = "<group>"; };
+		CE983EE3274957BD0012C026 /* MastrerDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastrerDataService.swift; sourceTree = "<group>"; };
+		CE983EE527495A1D0012C026 /* CodableModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableModels.swift; sourceTree = "<group>"; };
+		CE983EE727495A3B0012C026 /* Commodity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commodity.swift; sourceTree = "<group>"; };
+		CE983EE927495A550012C026 /* Fiat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiat.swift; sourceTree = "<group>"; };
+		CE983EEB27495A5F0012C026 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		CE983EED27495A780012C026 /* CommodityWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommodityWallet.swift; sourceTree = "<group>"; };
+		CE983EEF27495A840012C026 /* FiatWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatWallet.swift; sourceTree = "<group>"; };
+		CE983EF127495F8B0012C026 /* DataRetrieverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRetrieverService.swift; sourceTree = "<group>"; };
+		CE983EF4274968D40012C026 /* AssetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsTableViewCell.swift; sourceTree = "<group>"; };
+		CE983EF5274968D40012C026 /* AssetsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssetsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +134,7 @@
 		CE983E97274911970012C026 /* Bitpanda */ = {
 			isa = PBXGroup;
 			children = (
+				CE983EE0274953EC0012C026 /* Services */,
 				CE983ECD274914080012C026 /* Views */,
 				CE983ECA274912560012C026 /* ViewModels */,
 				CE983EC92749124F0012C026 /* Models */,
@@ -142,6 +176,12 @@
 		CE983EC92749124F0012C026 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE983EE527495A1D0012C026 /* CodableModels.swift */,
+				CE983EE727495A3B0012C026 /* Commodity.swift */,
+				CE983EE927495A550012C026 /* Fiat.swift */,
+				CE983EEB27495A5F0012C026 /* Wallet.swift */,
+				CE983EED27495A780012C026 /* CommodityWallet.swift */,
+				CE983EEF27495A840012C026 /* FiatWallet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,6 +189,8 @@
 		CE983ECA274912560012C026 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CE983ED82749532A0012C026 /* AssetsViewModel.swift */,
+				CE983EDA2749536C0012C026 /* WalletsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -156,10 +198,33 @@
 		CE983ECD274914080012C026 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE983EF3274968BA0012C026 /* Cells */,
 				CE983E9C274911970012C026 /* ViewController.swift */,
 				CE983E9E274911970012C026 /* Main.storyboard */,
+				CE983ED0274936D40012C026 /* AssetsScreenViewController.swift */,
+				CE983ED4274937040012C026 /* WalletsScreenViewController.swift */,
+				CE983ED5274937040012C026 /* WalletsScreenViewController.xib */,
+				CE983ED1274936D40012C026 /* AssetsScreenViewController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CE983EE0274953EC0012C026 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE983EE3274957BD0012C026 /* MastrerDataService.swift */,
+				CE983EF127495F8B0012C026 /* DataRetrieverService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE983EF3274968BA0012C026 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE983EF4274968D40012C026 /* AssetsTableViewCell.swift */,
+				CE983EF5274968D40012C026 /* AssetsTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +332,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE983ECC274913A10012C026 /* Mastrerdata.json in Resources */,
+				CE983ED7274937040012C026 /* WalletsScreenViewController.xib in Resources */,
 				CE983EA5274911980012C026 /* LaunchScreen.storyboard in Resources */,
 				CE983EA2274911980012C026 /* Assets.xcassets in Resources */,
+				CE983ED3274936D40012C026 /* AssetsScreenViewController.xib in Resources */,
 				CE983EA0274911970012C026 /* Main.storyboard in Resources */,
+				CE983EF7274968D40012C026 /* AssetsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,9 +362,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE983EEC27495A5F0012C026 /* Wallet.swift in Sources */,
+				CE983EDB2749536C0012C026 /* WalletsViewModel.swift in Sources */,
+				CE983ED6274937040012C026 /* WalletsScreenViewController.swift in Sources */,
 				CE983E9D274911970012C026 /* ViewController.swift in Sources */,
+				CE983EE827495A3B0012C026 /* Commodity.swift in Sources */,
+				CE983EEA27495A550012C026 /* Fiat.swift in Sources */,
+				CE983ED2274936D40012C026 /* AssetsScreenViewController.swift in Sources */,
+				CE983EEE27495A780012C026 /* CommodityWallet.swift in Sources */,
+				CE983EF027495A840012C026 /* FiatWallet.swift in Sources */,
+				CE983EF227495F8B0012C026 /* DataRetrieverService.swift in Sources */,
+				CE983EF6274968D40012C026 /* AssetsTableViewCell.swift in Sources */,
+				CE983EE4274957BD0012C026 /* MastrerDataService.swift in Sources */,
+				CE983EE627495A1D0012C026 /* CodableModels.swift in Sources */,
+				CE983ED92749532A0012C026 /* AssetsViewModel.swift in Sources */,
 				CE983E99274911970012C026 /* AppDelegate.swift in Sources */,
 				CE983E9B274911970012C026 /* SceneDelegate.swift in Sources */,
+				CE983EF827496B300012C026 /* Mastrerdata.json in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
