@@ -1,0 +1,6 @@
+framework module Pods_Bitpanda {
+  umbrella header "Pods-Bitpanda-umbrella.h"
+
+  export *
+  module * { export * }
+}

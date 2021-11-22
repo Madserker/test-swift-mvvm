@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4247C0AB8AA192BCE830AE7D /* Pods_Bitpanda_BitpandaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563FB5216A6464D18DEE1DAA /* Pods_Bitpanda_BitpandaUITests.framework */; };
+		520B6B2E08C186489A55F551 /* Pods_BitpandaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636BC4DC0AE054170296A0D0 /* Pods_BitpandaTests.framework */; };
+		CE4BC5B0274AD09A00FA639E /* WalletsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC5AE274AD09A00FA639E /* WalletsTableViewCell.swift */; };
+		CE4BC5B1274AD09A00FA639E /* WalletsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4BC5AF274AD09A00FA639E /* WalletsTableViewCell.xib */; };
 		CE983E99274911970012C026 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983E98274911970012C026 /* AppDelegate.swift */; };
 		CE983E9B274911970012C026 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983E9A274911970012C026 /* SceneDelegate.swift */; };
 		CE983E9D274911970012C026 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983E9C274911970012C026 /* ViewController.swift */; };
@@ -25,15 +29,12 @@
 		CE983EDB2749536C0012C026 /* WalletsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EDA2749536C0012C026 /* WalletsViewModel.swift */; };
 		CE983EE4274957BD0012C026 /* MastrerDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EE3274957BD0012C026 /* MastrerDataService.swift */; };
 		CE983EE627495A1D0012C026 /* CodableModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EE527495A1D0012C026 /* CodableModels.swift */; };
-		CE983EE827495A3B0012C026 /* Commodity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EE727495A3B0012C026 /* Commodity.swift */; };
-		CE983EEA27495A550012C026 /* Fiat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EE927495A550012C026 /* Fiat.swift */; };
-		CE983EEC27495A5F0012C026 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EEB27495A5F0012C026 /* Wallet.swift */; };
-		CE983EEE27495A780012C026 /* CommodityWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EED27495A780012C026 /* CommodityWallet.swift */; };
-		CE983EF027495A840012C026 /* FiatWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EEF27495A840012C026 /* FiatWallet.swift */; };
+		CE983EE827495A3B0012C026 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EE727495A3B0012C026 /* Asset.swift */; };
 		CE983EF227495F8B0012C026 /* DataRetrieverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EF127495F8B0012C026 /* DataRetrieverService.swift */; };
 		CE983EF6274968D40012C026 /* AssetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EF4274968D40012C026 /* AssetsTableViewCell.swift */; };
 		CE983EF7274968D40012C026 /* AssetsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE983EF5274968D40012C026 /* AssetsTableViewCell.xib */; };
 		CE983EF827496B300012C026 /* Mastrerdata.json in Sources */ = {isa = PBXBuildFile; fileRef = CE983ECB274913A10012C026 /* Mastrerdata.json */; };
+		F52C1E86A863BAE6A25AF77A /* Pods_Bitpanda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443EA31DF9A68268642C88D3 /* Pods_Bitpanda.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18A4EDBFECC08FF5A891A55E /* Pods-Bitpanda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitpanda.debug.xcconfig"; path = "Target Support Files/Pods-Bitpanda/Pods-Bitpanda.debug.xcconfig"; sourceTree = "<group>"; };
+		25154810815A30377086C401 /* Pods-Bitpanda-BitpandaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitpanda-BitpandaUITests.release.xcconfig"; path = "Target Support Files/Pods-Bitpanda-BitpandaUITests/Pods-Bitpanda-BitpandaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		443EA31DF9A68268642C88D3 /* Pods_Bitpanda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitpanda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F03015C056E4FC0FD64F046 /* Pods-BitpandaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitpandaTests.debug.xcconfig"; path = "Target Support Files/Pods-BitpandaTests/Pods-BitpandaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		55C141180418ED9BC00080F9 /* Pods-Bitpanda-BitpandaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitpanda-BitpandaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bitpanda-BitpandaUITests/Pods-Bitpanda-BitpandaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		563FB5216A6464D18DEE1DAA /* Pods_Bitpanda_BitpandaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitpanda_BitpandaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		636BC4DC0AE054170296A0D0 /* Pods_BitpandaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitpandaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E094B15794B10064AA6EDBA /* Pods-BitpandaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitpandaTests.release.xcconfig"; path = "Target Support Files/Pods-BitpandaTests/Pods-BitpandaTests.release.xcconfig"; sourceTree = "<group>"; };
+		98AFCE4A531AFC631F1D2560 /* Pods-Bitpanda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitpanda.release.xcconfig"; path = "Target Support Files/Pods-Bitpanda/Pods-Bitpanda.release.xcconfig"; sourceTree = "<group>"; };
+		CE4BC5AE274AD09A00FA639E /* WalletsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsTableViewCell.swift; sourceTree = "<group>"; };
+		CE4BC5AF274AD09A00FA639E /* WalletsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletsTableViewCell.xib; sourceTree = "<group>"; };
 		CE983E95274911970012C026 /* Bitpanda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitpanda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE983E98274911970012C026 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE983E9A274911970012C026 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,11 +88,7 @@
 		CE983EDA2749536C0012C026 /* WalletsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsViewModel.swift; sourceTree = "<group>"; };
 		CE983EE3274957BD0012C026 /* MastrerDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastrerDataService.swift; sourceTree = "<group>"; };
 		CE983EE527495A1D0012C026 /* CodableModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableModels.swift; sourceTree = "<group>"; };
-		CE983EE727495A3B0012C026 /* Commodity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commodity.swift; sourceTree = "<group>"; };
-		CE983EE927495A550012C026 /* Fiat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiat.swift; sourceTree = "<group>"; };
-		CE983EEB27495A5F0012C026 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
-		CE983EED27495A780012C026 /* CommodityWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommodityWallet.swift; sourceTree = "<group>"; };
-		CE983EEF27495A840012C026 /* FiatWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatWallet.swift; sourceTree = "<group>"; };
+		CE983EE727495A3B0012C026 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		CE983EF127495F8B0012C026 /* DataRetrieverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRetrieverService.swift; sourceTree = "<group>"; };
 		CE983EF4274968D40012C026 /* AssetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsTableViewCell.swift; sourceTree = "<group>"; };
 		CE983EF5274968D40012C026 /* AssetsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssetsTableViewCell.xib; sourceTree = "<group>"; };
@@ -91,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52C1E86A863BAE6A25AF77A /* Pods_Bitpanda.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520B6B2E08C186489A55F551 /* Pods_BitpandaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,12 +115,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4247C0AB8AA192BCE830AE7D /* Pods_Bitpanda_BitpandaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD5F95FFC0F6BEDF49D7E15A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18A4EDBFECC08FF5A891A55E /* Pods-Bitpanda.debug.xcconfig */,
+				98AFCE4A531AFC631F1D2560 /* Pods-Bitpanda.release.xcconfig */,
+				55C141180418ED9BC00080F9 /* Pods-Bitpanda-BitpandaUITests.debug.xcconfig */,
+				25154810815A30377086C401 /* Pods-Bitpanda-BitpandaUITests.release.xcconfig */,
+				4F03015C056E4FC0FD64F046 /* Pods-BitpandaTests.debug.xcconfig */,
+				8E094B15794B10064AA6EDBA /* Pods-BitpandaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CE983E8C274911970012C026 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +142,8 @@
 				CE983EAE274911980012C026 /* BitpandaTests */,
 				CE983EB8274911980012C026 /* BitpandaUITests */,
 				CE983E96274911970012C026 /* Products */,
+				CD5F95FFC0F6BEDF49D7E15A /* Pods */,
+				D8A2BFC3C15DBD5443664B7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,11 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				CE983EE527495A1D0012C026 /* CodableModels.swift */,
-				CE983EE727495A3B0012C026 /* Commodity.swift */,
-				CE983EE927495A550012C026 /* Fiat.swift */,
-				CE983EEB27495A5F0012C026 /* Wallet.swift */,
-				CE983EED27495A780012C026 /* CommodityWallet.swift */,
-				CE983EEF27495A840012C026 /* FiatWallet.swift */,
+				CE983EE727495A3B0012C026 /* Asset.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,8 +245,20 @@
 			children = (
 				CE983EF4274968D40012C026 /* AssetsTableViewCell.swift */,
 				CE983EF5274968D40012C026 /* AssetsTableViewCell.xib */,
+				CE4BC5AE274AD09A00FA639E /* WalletsTableViewCell.swift */,
+				CE4BC5AF274AD09A00FA639E /* WalletsTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		D8A2BFC3C15DBD5443664B7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				443EA31DF9A68268642C88D3 /* Pods_Bitpanda.framework */,
+				563FB5216A6464D18DEE1DAA /* Pods_Bitpanda_BitpandaUITests.framework */,
+				636BC4DC0AE054170296A0D0 /* Pods_BitpandaTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,9 +268,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE983EBF274911980012C026 /* Build configuration list for PBXNativeTarget "Bitpanda" */;
 			buildPhases = (
+				AA8C25C7DAE9C0FB9ACD1F08 /* [CP] Check Pods Manifest.lock */,
 				CE983E91274911970012C026 /* Sources */,
 				CE983E92274911970012C026 /* Frameworks */,
 				CE983E93274911970012C026 /* Resources */,
+				15057DC572D1724AE6CB8989 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,6 +287,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE983EC2274911980012C026 /* Build configuration list for PBXNativeTarget "BitpandaTests" */;
 			buildPhases = (
+				6364B58D6CCCDF996138F884 /* [CP] Check Pods Manifest.lock */,
 				CE983EA7274911980012C026 /* Sources */,
 				CE983EA8274911980012C026 /* Frameworks */,
 				CE983EA9274911980012C026 /* Resources */,
@@ -269,9 +306,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE983EC5274911980012C026 /* Build configuration list for PBXNativeTarget "BitpandaUITests" */;
 			buildPhases = (
+				D88055E64713BA53C302FADA /* [CP] Check Pods Manifest.lock */,
 				CE983EB1274911980012C026 /* Sources */,
 				CE983EB2274911980012C026 /* Frameworks */,
 				CE983EB3274911980012C026 /* Resources */,
+				0F567D66BA4DCD7BF098A763 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4BC5B1274AD09A00FA639E /* WalletsTableViewCell.xib in Resources */,
 				CE983ECC274913A10012C026 /* Mastrerdata.json in Resources */,
 				CE983ED7274937040012C026 /* WalletsScreenViewController.xib in Resources */,
 				CE983EA5274911980012C026 /* LaunchScreen.storyboard in Resources */,
@@ -357,22 +397,122 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F567D66BA4DCD7BF098A763 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bitpanda-BitpandaUITests/Pods-Bitpanda-BitpandaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bitpanda-BitpandaUITests/Pods-Bitpanda-BitpandaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bitpanda-BitpandaUITests/Pods-Bitpanda-BitpandaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15057DC572D1724AE6CB8989 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bitpanda/Pods-Bitpanda-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bitpanda/Pods-Bitpanda-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bitpanda/Pods-Bitpanda-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6364B58D6CCCDF996138F884 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitpandaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA8C25C7DAE9C0FB9ACD1F08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bitpanda-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D88055E64713BA53C302FADA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bitpanda-BitpandaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE983E91274911970012C026 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE983EEC27495A5F0012C026 /* Wallet.swift in Sources */,
 				CE983EDB2749536C0012C026 /* WalletsViewModel.swift in Sources */,
 				CE983ED6274937040012C026 /* WalletsScreenViewController.swift in Sources */,
 				CE983E9D274911970012C026 /* ViewController.swift in Sources */,
-				CE983EE827495A3B0012C026 /* Commodity.swift in Sources */,
-				CE983EEA27495A550012C026 /* Fiat.swift in Sources */,
+				CE983EE827495A3B0012C026 /* Asset.swift in Sources */,
 				CE983ED2274936D40012C026 /* AssetsScreenViewController.swift in Sources */,
-				CE983EEE27495A780012C026 /* CommodityWallet.swift in Sources */,
-				CE983EF027495A840012C026 /* FiatWallet.swift in Sources */,
 				CE983EF227495F8B0012C026 /* DataRetrieverService.swift in Sources */,
 				CE983EF6274968D40012C026 /* AssetsTableViewCell.swift in Sources */,
+				CE4BC5B0274AD09A00FA639E /* WalletsTableViewCell.swift in Sources */,
 				CE983EE4274957BD0012C026 /* MastrerDataService.swift in Sources */,
 				CE983EE627495A1D0012C026 /* CodableModels.swift in Sources */,
 				CE983ED92749532A0012C026 /* AssetsViewModel.swift in Sources */,
@@ -552,11 +692,13 @@
 		};
 		CE983EC0274911980012C026 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18A4EDBFECC08FF5A891A55E /* Pods-Bitpanda.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8U69XXMXZC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bitpanda/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -564,6 +706,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -579,11 +722,13 @@
 		};
 		CE983EC1274911980012C026 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98AFCE4A531AFC631F1D2560 /* Pods-Bitpanda.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8U69XXMXZC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bitpanda/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -591,6 +736,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -606,11 +752,13 @@
 		};
 		CE983EC3274911980012C026 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F03015C056E4FC0FD64F046 /* Pods-BitpandaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8U69XXMXZC;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -630,11 +778,13 @@
 		};
 		CE983EC4274911980012C026 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E094B15794B10064AA6EDBA /* Pods-BitpandaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8U69XXMXZC;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -654,10 +804,12 @@
 		};
 		CE983EC6274911980012C026 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55C141180418ED9BC00080F9 /* Pods-Bitpanda-BitpandaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8U69XXMXZC;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -676,10 +828,12 @@
 		};
 		CE983EC7274911980012C026 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25154810815A30377086C401 /* Pods-Bitpanda-BitpandaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8U69XXMXZC;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
