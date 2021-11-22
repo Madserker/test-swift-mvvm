@@ -11,6 +11,7 @@ class DataRetrieverError: Error {
     enum ErrorType {
         case jsonNotFound
         case parseFailed
+        case unknown
     }
     
     final let errorType: ErrorType

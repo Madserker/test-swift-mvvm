@@ -30,7 +30,7 @@ class Commodity: Asset {
     }
 }
 
-class Wallet: Asset {
+class Wallet: Asset, Comparable {
     var balance: String
     var isDefault: Bool = false
     
@@ -40,5 +40,14 @@ class Wallet: Asset {
             self.isDefault = isDefaultSecure
         }
         super.init(name: name, iconURL: iconURL, darkIconURL: darkIconURL, symbol: symbol)
+    }
+    
+    static func < (lhs: Wallet, rhs: Wallet) -> Bool {
+        return lhs.balance.localizedDouble() < rhs.balance.localizedDouble()
+    }
+    
+    static func == (lhs: Wallet, rhs: Wallet) -> Bool {
+        return lhs.balance.localizedDouble() == rhs.balance.localizedDouble()
+
     }
 }

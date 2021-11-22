@@ -7,93 +7,64 @@
 
 import Foundation
 
-class WalletViewModel {
+class WalletsViewModel {
     
-    var assets: [CodableCommodity]
-    var fiats: [CodableFiat]
+    private let getWalletsUseCase = GetWalletsUseCase()
+    private let getCommodityWalletsUseCase = GetCommodityWalletsUseCase()
+    private let getFiatsWalletsUseCase = GetFIatWalletsUseCase()
+    private let retryFetchDataUseCase = RetryFetchDataUseCase()
+    
+    var wallets: [Wallet] = []
+    var commodityWallets: [Wallet] = []
+    var fiatWallets: [Wallet] = []
+    
+    var showErrorPage: Bool = false
+    var errorMessage: String = ""
     
     init() {
-        assets = MastrerDataService.shared.getCryptocoins()
-        assets.append(contentsOf: MastrerDataService.shared.getCommodities())
-        fiats = MastrerDataService.shared.getFiats()
+        loadData()
     }
     
-    public func getFiatWallets() -> [Wallet] {
-        let data = MastrerDataService.shared.getFiatWallets()
-        let fiatWallets: [Wallet] = data.map { item in
-            return Wallet(
-                name: item.attributes.name,
-                iconURL: getWalletIcon(
-                    isDark: false,
-                    symbol: item.attributes.fiatSymbol),
-                darkIconURL: getWalletIcon(
-                    isDark: true,
-                    symbol: item.attributes.fiatSymbol),
-                balance: item.attributes.balance,
-                symbol: item.attributes.fiatSymbol,
-                isDefault: false
-            )
-        }
-        return fiatWallets
+    public func retryLoadData() {
+        retryFetchDataUseCase.execute()
+        loadData()
     }
     
-    public func getWallets() -> [Wallet] {
-        let data = MastrerDataService.shared.getWallets().filter({!$0.attributes.deleted})
-        let wallets: [Wallet] = data.map { item in
-            return Wallet(
-                name: item.attributes.name,
-                iconURL: getWalletIcon(
-                    isDark: false,
-                    symbol: item.attributes.cryptocoinSymbol),
-                darkIconURL: getWalletIcon(
-                    isDark: true,
-                    symbol: item.attributes.cryptocoinSymbol),
-                balance: item.attributes.balance,
-                symbol: item.attributes.cryptocoinSymbol,
-                isDefault: item.attributes.isDefault
-            )
+    private func loadData() {
+        showErrorPage = false
+        errorMessage = ""
+        
+        switch getWalletsUseCase.execute() {
+        case .failure(let error):
+            showErrorPage = true
+            errorMessage = getErrorMessage(error)
+        case .success(let data):
+            wallets = data
         }
-        return wallets
+        switch getCommodityWalletsUseCase.execute() {
+        case .failure(let error):
+            showErrorPage = true
+            errorMessage = getErrorMessage(error)
+        case .success(let data):
+            commodityWallets = data
+        }
+        switch getFiatsWalletsUseCase.execute() {
+        case .failure(let error):
+            showErrorPage = true
+            errorMessage = getErrorMessage(error)
+        case .success(let data):
+            fiatWallets = data
+        }
     }
     
-    public func getCommodityWallets() -> [Wallet] {
-        let data = MastrerDataService.shared.getCommodityWallets().filter({!$0.attributes.deleted})
-        let commodityWallets: [Wallet] = data.map { item in
-            return Wallet(
-                name: item.attributes.name,
-                iconURL: getFiatWalletIcon(
-                    isDark: false,
-                    symbol: item.attributes.cryptocoinSymbol),
-                darkIconURL: getFiatWalletIcon(
-                    isDark: true,
-                    symbol: item.attributes.cryptocoinSymbol),
-                balance: item.attributes.balance,
-                symbol: item.attributes.cryptocoinSymbol,
-                isDefault: item.attributes.isDefault
-            )
+    public func getErrorMessage(_ error: DataRetrieverError) -> String {
+        switch error.errorType {
+        case .jsonNotFound:
+            return "The wallet data wasn't found"
+        case .parseFailed:
+            return "Couldn't load the information. The data was incorrect"
+        case .unknown:
+            return "Couldn't load the information."
         }
-        return commodityWallets
-    }
-    
-    private func getWalletIcon(isDark: Bool, symbol: String) -> String {
-        var logo: String = ""
-        assets.forEach { asset in
-            if asset.attributes.symbol == symbol {
-                logo = isDark ? asset.attributes.logoDark : asset.attributes.logo
-                return
-            }
-        }
-        return logo
-    }
-    
-    private func getFiatWalletIcon(isDark: Bool, symbol: String) -> String {
-        var logo: String = ""
-        fiats.forEach { fiat in
-            if fiat.attributes.symbol == symbol {
-                logo = isDark ? fiat.attributes.logoDark : fiat.attributes.logo
-                return
-            }
-        }
-        return logo
     }
 }

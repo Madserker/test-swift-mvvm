@@ -11,8 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AssetsScreenViewController" customModule="Bitpanda" customModuleProvider="target">
             <connections>
-                <outlet property="assetsSegmentedControl" destination="xqc-j8-4H6" id="wUq-Cq-mxx"/>
-                <outlet property="assetsTableView" destination="Dr8-J1-IQl" id="KMf-CR-Jmo"/>
+                <outlet property="generalView" destination="i5M-Pr-FkT" id="ljx-Xu-YUI"/>
+                <outlet property="segmentedControl" destination="xqc-j8-4H6" id="sY1-bV-VAq"/>
+                <outlet property="tableView" destination="Dr8-J1-IQl" id="jkp-6j-dkl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,12 +34,11 @@
                         <segment title="Third"/>
                     </segments>
                     <connections>
-                        <action selector="segmentValueChanged:" destination="-1" eventType="valueChanged" id="W4s-5v-6ka"/>
+                        <action selector="segmentValueChanged:" destination="-1" eventType="valueChanged" id="RIA-cd-1BH"/>
                     </connections>
                 </segmentedControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemOrangeColor"/>
             <constraints>
                 <constraint firstItem="xqc-j8-4H6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6T7-b5-6Wh"/>
                 <constraint firstItem="xqc-j8-4H6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Dpw-Ei-pMb"/>
@@ -54,9 +54,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

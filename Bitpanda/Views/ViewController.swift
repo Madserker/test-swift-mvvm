@@ -26,16 +26,16 @@ class ViewController: UITabBarController {
         
         guard let items = self.tabBar.items else { return }
         
-        items[0].image = UIImage(systemName: "star")
-        items[0].title = "Asset"
+        items[0].image = UIImage(systemName: "bitcoinsign.circle")
+        items[0].title = "Assets"
         
-        items[1].image = UIImage(systemName: "bell")
+        items[1].image = UIImage(systemName: "wallet.pass")
         items[1].title = "Wallets"
     }
     
     private func setupUI() {
         self.modalPresentationStyle = .fullScreen
-        self.tabBar.tintColor = .orange
-        self.tabBar.backgroundColor = .white
+        self.tabBar.tintColor = UIColor.primary
+        self.tabBar.backgroundColor = UIColor.secondary
     }
 }

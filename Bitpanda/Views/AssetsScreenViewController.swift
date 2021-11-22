@@ -9,8 +9,9 @@ import UIKit
 
 class AssetsScreenViewController: UIViewController {
     
-    @IBOutlet weak var assetsTableView: UITableView!
-    @IBOutlet weak var assetsSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet var generalView: UIView!
     
     let assetsCell = "AssetsTableViewCell"
     
@@ -22,54 +23,74 @@ class AssetsScreenViewController: UIViewController {
         setupUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if viewModel.showErrorPage {
+            let alert = UIAlertController(
+                title: self.viewModel.errorMessage, message: "", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Retry", style: .default) {_ in
+                self.viewModel.retryLoadData()
+                if self.viewModel.showErrorPage {
+                    self.present(alert, animated: true)
+                } else {
+                    self.tableView.reloadData()
+                }
+            })
+
+            self.present(alert, animated: true)
+        }
+    }
+    
     private func setupTableView() {
-        assetsTableView.delegate = self
-        assetsTableView.dataSource = self
-        assetsTableView.showsVerticalScrollIndicator = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.showsVerticalScrollIndicator = false
+        tableView.allowsSelection = false
         
-        assetsTableView.register(UINib(nibName: assetsCell, bundle: nil), forCellReuseIdentifier: assetsCell)
+        tableView.register(UINib(nibName: assetsCell, bundle: nil), forCellReuseIdentifier: assetsCell)
     }
     
     private func setupUI() {
-        assetsSegmentedControl.setTitle("Cryptocoins", forSegmentAt: 0)
-        assetsSegmentedControl.setTitle("Commodities", forSegmentAt: 1)
-        assetsSegmentedControl.setTitle("Fiats", forSegmentAt: 2)
+        generalView.backgroundColor = UIColor.primary
+        segmentedControl.setTitle("Cryptocoins", forSegmentAt: 0)
+        segmentedControl.setTitle("Commodities", forSegmentAt: 1)
+        segmentedControl.setTitle("Fiats", forSegmentAt: 2)
     }
     
     @IBAction func segmentValueChanged(_ sender: Any) {
-        assetsTableView.reloadData()
+        tableView.reloadData()
     }
 }
 
 extension AssetsScreenViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if assetsSegmentedControl.selectedSegmentIndex == 0 {
-            return viewModel.getCryptocoins().count
-        } else if assetsSegmentedControl.selectedSegmentIndex == 1 {
-            return viewModel.getCommodities().count
+        if segmentedControl.selectedSegmentIndex == 0 {
+            return viewModel.cryptocoins.count
+        } else if segmentedControl.selectedSegmentIndex == 1 {
+            return viewModel.commodities.count
         } else {
-            return viewModel.getFiats().count
+            return viewModel.fiats.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if assetsSegmentedControl.selectedSegmentIndex == 0 {
-            if let cell = assetsTableView.dequeueReusableCell(withIdentifier: assetsCell, for: indexPath) as? AssetsTableViewCell {
-                cell.configureCell(asset: viewModel.getCryptocoins()[indexPath.row])
+        if segmentedControl.selectedSegmentIndex == 0 {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: assetsCell, for: indexPath) as? AssetsTableViewCell {
+                cell.configureCell(asset: viewModel.cryptocoins[indexPath.row])
                 return cell
             } else {
                 return UITableViewCell()
             }
-        } else if assetsSegmentedControl.selectedSegmentIndex == 1 {
-            if let cell = assetsTableView.dequeueReusableCell(withIdentifier: assetsCell, for: indexPath) as? AssetsTableViewCell {
-                cell.configureCell(asset: viewModel.getCommodities()[indexPath.row])
+        } else if segmentedControl.selectedSegmentIndex == 1 {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: assetsCell, for: indexPath) as? AssetsTableViewCell {
+                cell.configureCell(asset: viewModel.commodities[indexPath.row])
                 return cell
             } else {
                 return UITableViewCell()
             }
         } else {
-            if let cell = assetsTableView.dequeueReusableCell(withIdentifier: assetsCell, for: indexPath) as? AssetsTableViewCell {
-                cell.configureCell(asset: viewModel.getFiats()[indexPath.row])
+            if let cell = tableView.dequeueReusableCell(withIdentifier: assetsCell, for: indexPath) as? AssetsTableViewCell {
+                cell.configureCell(asset: viewModel.fiats[indexPath.row])
                 return cell
             } else {
                 return UITableViewCell()

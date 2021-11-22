@@ -9,45 +9,62 @@ import Foundation
 
 class AssetsViewModel {
     
-    public func getCryptocoins() -> [Commodity] {
-        let data = MastrerDataService.shared.getCryptocoins()
-        let cryptocoins: [Commodity] = data.map { item in
-            return Commodity(
-                name: item.attributes.name,
-                iconURL: item.attributes.logo,
-                darkIconURL: item.attributes.logoDark,
-                price: item.attributes.avgPrice,
-                symbol: item.attributes.symbol
-            )
-        }
-        return cryptocoins
+    private let getCryptocoinsUseCase = GetCryptoCoinsUseCase()
+    private let getCommoditiesUseCase = GetCommoditiesUseCase()
+    private let getFiatsUseCase = GetFiatsUseCase()
+    private let retryFetchDataUseCase = RetryFetchDataUseCase()
+    
+    var cryptocoins: [Commodity] = []
+    var commodities: [Commodity] = []
+    var fiats: [Asset] = []
+    
+    var showErrorPage: Bool = false
+    var errorMessage: String = ""
+    
+    init() {
+        loadData()
     }
     
-    public func getCommodities() -> [Commodity] {
-        let data = MastrerDataService.shared.getCommodities()
-        let commodities: [Commodity] = data.map { item in
-            return Commodity(
-                name: item.attributes.name,
-                iconURL: item.attributes.logo,
-                darkIconURL: item.attributes.logoDark,
-                price: item.attributes.avgPrice,
-                symbol: item.attributes.symbol
-            )
-        }
-        return commodities
+    public func retryLoadData() {
+        retryFetchDataUseCase.execute()
+        loadData()
     }
     
-    public func getFiats() -> [Asset] {
-        let data = MastrerDataService.shared.getFiats().filter({$0.attributes.hasWallets})
-        let fiats: [Asset] = data.map { item in
-            return Asset(
-                name: item.attributes.name,
-                iconURL: item.attributes.logo,
-                darkIconURL: item.attributes.logoDark,
-                symbol: item.attributes.symbol
-            )
-        }
-        return fiats
+    private func loadData() {
+        showErrorPage = false
+        errorMessage = ""
         
+        switch getCryptocoinsUseCase.execute() {
+        case .failure(let error):
+            showErrorPage = true
+            errorMessage = getErrorMessage(error)
+        case .success(let data):
+            cryptocoins = data
+        }
+        switch getCommoditiesUseCase.execute() {
+        case .failure(let error):
+            showErrorPage = true
+            errorMessage = getErrorMessage(error)
+        case .success(let data):
+            commodities = data
+        }
+        switch getFiatsUseCase.execute() {
+        case .failure(let error):
+            showErrorPage = true
+            errorMessage = getErrorMessage(error)
+        case .success(let data):
+            fiats = data
+        }
+    }
+    
+    private func getErrorMessage(_ error: DataRetrieverError) -> String {
+        switch error.errorType {
+        case .jsonNotFound:
+            return "The asset data wasn't found"
+        case .parseFailed:
+            return "Couldn't load the information. The data was incorrect"
+        case .unknown:
+            return "Couldn't load the information."
+        }
     }
 }

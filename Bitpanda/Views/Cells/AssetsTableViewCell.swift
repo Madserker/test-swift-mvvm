@@ -28,15 +28,20 @@ class AssetsTableViewCell: UITableViewCell {
     }
     
     private func setupUI() {
-        leftView.backgroundColor = UIColor.init(white: 0, alpha: 0.07)
+        leftView.backgroundColor = UIColor.cellCapsule
         leftView.clipsToBounds = true
         leftView.layer.cornerRadius = 20
         leftView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
         
-        rightView.backgroundColor = UIColor.init(white: 0, alpha: 0.07)
+        rightView.backgroundColor = UIColor.cellCapsule
         rightView.layer.cornerRadius = 20
         rightView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         
+        name.font = UIFont.primary
+        symbol.font = UIFont.primary
+        price.font = UIFont.secondary
+        
+        price.textColor = UIColor.appGrey
     }
     
     public func configureCell(asset: Asset) {
@@ -62,11 +67,11 @@ class AssetsTableViewCell: UITableViewCell {
         } else if let wallet = asset as? Wallet {
             self.price.text = wallet.balance
             if wallet.isDefault {
-                leftView.backgroundColor = .green
-                rightView.backgroundColor = .green
+                leftView.backgroundColor = UIColor.primary
+                rightView.backgroundColor = UIColor.primary
             } else {
-                leftView.backgroundColor = UIColor.init(white: 0, alpha: 0.07)
-                rightView.backgroundColor = UIColor.init(white: 0, alpha: 0.07)
+                leftView.backgroundColor = UIColor.cellCapsule
+                rightView.backgroundColor = UIColor.cellCapsule
             }
         } else {
             self.price.isHidden = true

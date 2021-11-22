@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WalletsScreenViewController" customModule="Bitpanda" customModuleProvider="target">
             <connections>
+                <outlet property="generalView" destination="i5M-Pr-FkT" id="j8c-bB-oFH"/>
                 <outlet property="tableView" destination="SqG-3M-qRl" id="Nmt-f5-hS0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,7 +27,6 @@
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemOrangeColor"/>
             <constraints>
                 <constraint firstItem="SqG-3M-qRl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0jS-2x-ll2"/>
                 <constraint firstItem="SqG-3M-qRl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="UFX-iK-H37"/>
@@ -39,9 +39,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

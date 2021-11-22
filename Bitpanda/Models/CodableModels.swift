@@ -58,7 +58,6 @@ struct CodableCommodityAttributes: Codable {
     let circulatingSupply: String?
     let allowedUnverified, allowedDocumented, allowedVerified: Bool
     let measurementUnit: String?
-//    let ieoPhases: [CodableIeoPhase]
     let info, unavailableReason, maintenanceReason, walletInfo: String
     let extraInfo, infoIntegration, infoDeu, infoEng: String
     let infoFra, unavailableReasonDeu, unavailableReasonEng, unavailableReasonFra: String
@@ -112,7 +111,6 @@ struct CodableCommodityAttributes: Codable {
         case allowedDocumented = "allowed_documented"
         case allowedVerified = "allowed_verified"
         case measurementUnit = "measurement_unit"
-        //case ieoPhases = "ieo_phases"
         case info
         case unavailableReason = "unavailable_reason"
         case maintenanceReason = "maintenance_reason"
