@@ -11,7 +11,7 @@ class MastrerDataService {
      
     static let shared = MastrerDataService()
     
-    var data: Result<CodableDataAttributes, DataRetrieverError>
+    private(set) var data: Result<CodableDataAttributes, DataRetrieverError>
     
     private init() {
         self.data = .failure(DataRetrieverError(.unknown))
@@ -19,8 +19,10 @@ class MastrerDataService {
     }
     
     public func fetchData() {
-        let response =
-            DataRetrieverService.fetchData(type: CodableResponseModel.self, resourceName: "Mastrerdata")
+        let response = DataRetrieverService.fetchData(
+            type: CodableResponseModel.self,
+            resourceName: "Mastrerdata")
+        
         switch response {
         case .failure(let error):
             self.data = .failure(error)

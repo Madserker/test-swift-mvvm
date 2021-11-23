@@ -9,19 +9,27 @@ import Foundation
 
 class WalletsViewModel {
     
-    private let getWalletsUseCase = GetWalletsUseCase()
-    private let getCommodityWalletsUseCase = GetCommodityWalletsUseCase()
-    private let getFiatsWalletsUseCase = GetFIatWalletsUseCase()
-    private let retryFetchDataUseCase = RetryFetchDataUseCase()
+    private let getWalletsUseCase: GetWalletsUseCaseProtocol
+    private let getCommodityWalletsUseCase: GetCommodityWalletsUseCaseProtocol
+    private let getFiatWalletsUseCase: GetFiatWalletsUseCaseProtocol
+    private let retryFetchDataUseCase: RetryFetchDataUseCaseProtocol
     
-    var wallets: [Wallet] = []
-    var commodityWallets: [Wallet] = []
-    var fiatWallets: [Wallet] = []
+    private(set) var wallets: [Wallet] = []
+    private(set) var commodityWallets: [Wallet] = []
+    private(set) var fiatWallets: [Wallet] = []
     
-    var showErrorPage: Bool = false
-    var errorMessage: String = ""
+    private(set) var showErrorPage: Bool = false
+    private(set) var errorMessage: String = ""
     
-    init() {
+    init(getWalletsUseCase: GetWalletsUseCaseProtocol,
+         getCommodityWalletsUseCase: GetCommodityWalletsUseCaseProtocol,
+         getFiatWalletsUseCase: GetFiatWalletsUseCaseProtocol,
+         retryFetchDataUseCase: RetryFetchDataUseCaseProtocol
+    ) {
+        self.getWalletsUseCase = getWalletsUseCase
+        self.getCommodityWalletsUseCase = getCommodityWalletsUseCase
+        self.getFiatWalletsUseCase = getFiatWalletsUseCase
+        self.retryFetchDataUseCase = retryFetchDataUseCase
         loadData()
     }
     
@@ -48,7 +56,7 @@ class WalletsViewModel {
         case .success(let data):
             commodityWallets = data
         }
-        switch getFiatsWalletsUseCase.execute() {
+        switch getFiatWalletsUseCase.execute() {
         case .failure(let error):
             showErrorPage = true
             errorMessage = getErrorMessage(error)
@@ -57,7 +65,7 @@ class WalletsViewModel {
         }
     }
     
-    public func getErrorMessage(_ error: DataRetrieverError) -> String {
+    private func getErrorMessage(_ error: DataRetrieverError) -> String {
         switch error.errorType {
         case .jsonNotFound:
             return "The wallet data wasn't found"

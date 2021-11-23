@@ -13,9 +13,14 @@ class AssetsScreenViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet var generalView: UIView!
     
-    let assetsCell = "AssetsTableViewCell"
+    private let assetsCell = "AssetsTableViewCell"
     
-    let viewModel = AssetsViewModel()
+    private let viewModel = AssetsViewModel(
+        getCryptocoinsUseCase: GetCryptoCoinsUseCase(),
+        getCommoditiesUseCase: GetCommoditiesUseCase(),
+        getFiatsUseCase: GetFiatsUseCase(),
+        retryFetchDataUseCase: RetryFetchDataUseCase()
+    )
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +41,6 @@ class AssetsScreenViewController: UIViewController {
                     self.tableView.reloadData()
                 }
             })
-
             self.present(alert, animated: true)
         }
     }

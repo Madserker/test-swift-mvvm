@@ -9,19 +9,27 @@ import Foundation
 
 class AssetsViewModel {
     
-    private let getCryptocoinsUseCase = GetCryptoCoinsUseCase()
-    private let getCommoditiesUseCase = GetCommoditiesUseCase()
-    private let getFiatsUseCase = GetFiatsUseCase()
-    private let retryFetchDataUseCase = RetryFetchDataUseCase()
+    private let getCryptocoinsUseCase: GetCryptocoinsUseCaseProtocol
+    private let getCommoditiesUseCase: GetCommoditiesUseCaseProtocol
+    private let getFiatsUseCase: GetFiatsUseCaseProtocol
+    private let retryFetchDataUseCase: RetryFetchDataUseCaseProtocol
     
-    var cryptocoins: [Commodity] = []
-    var commodities: [Commodity] = []
-    var fiats: [Asset] = []
+    private(set) var cryptocoins: [Commodity] = []
+    private(set) var  commodities: [Commodity] = []
+    private(set) var  fiats: [Asset] = []
     
-    var showErrorPage: Bool = false
-    var errorMessage: String = ""
+    private(set) var showErrorPage: Bool = false
+    private(set) var errorMessage: String = ""
     
-    init() {
+    init(getCryptocoinsUseCase: GetCryptocoinsUseCaseProtocol,
+         getCommoditiesUseCase: GetCommoditiesUseCaseProtocol,
+         getFiatsUseCase: GetFiatsUseCaseProtocol,
+         retryFetchDataUseCase: RetryFetchDataUseCaseProtocol
+    ) {
+        self.getCryptocoinsUseCase = getCryptocoinsUseCase
+        self.getCommoditiesUseCase = getCommoditiesUseCase
+        self.getFiatsUseCase = getFiatsUseCase
+        self.retryFetchDataUseCase = retryFetchDataUseCase
         loadData()
     }
     

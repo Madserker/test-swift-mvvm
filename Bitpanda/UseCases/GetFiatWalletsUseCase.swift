@@ -11,7 +11,7 @@ protocol GetFiatWalletsUseCaseProtocol {
     func execute() -> Result<[Wallet], DataRetrieverError>
 }
 
-final class GetFIatWalletsUseCase: GetFiatWalletsUseCaseProtocol {
+final class GetFiatWalletsUseCase: GetFiatWalletsUseCaseProtocol {
     func execute() -> Result<[Wallet], DataRetrieverError> {
         let result = MastrerDataService.shared.data
         switch result {

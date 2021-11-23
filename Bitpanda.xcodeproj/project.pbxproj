@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		4247C0AB8AA192BCE830AE7D /* Pods_Bitpanda_BitpandaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563FB5216A6464D18DEE1DAA /* Pods_Bitpanda_BitpandaUITests.framework */; };
 		520B6B2E08C186489A55F551 /* Pods_BitpandaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636BC4DC0AE054170296A0D0 /* Pods_BitpandaTests.framework */; };
-		CE0D2D91274C1D86001AAAB5 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D2D90274C1D86001AAAB5 /* UIColor+Custom.swift */; };
-		CE0D2D93274C223B001AAAB5 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D2D92274C223B001AAAB5 /* String+Localized.swift */; };
+		CE0D2D91274C1D86001AAAB5 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D2D90274C1D86001AAAB5 /* UIColor+Extensions.swift */; };
+		CE0D2D93274C223B001AAAB5 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D2D92274C223B001AAAB5 /* String+Extensions.swift */; };
 		CE0D2D96274C2FCB001AAAB5 /* GetCryptocoinsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D2D95274C2FCB001AAAB5 /* GetCryptocoinsUseCase.swift */; };
 		CE0D2D98274C3000001AAAB5 /* GetWalletsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D2D97274C3000001AAAB5 /* GetWalletsUseCase.swift */; };
 		CE0D2D9A274C3015001AAAB5 /* GetCommoditiesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D2D99274C3015001AAAB5 /* GetCommoditiesUseCase.swift */; };
@@ -18,7 +18,7 @@
 		CE0D2D9E274C304C001AAAB5 /* GetFiatWalletsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D2D9D274C304C001AAAB5 /* GetFiatWalletsUseCase.swift */; };
 		CE0D2DA0274C3074001AAAB5 /* GetFiatsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D2D9F274C3074001AAAB5 /* GetFiatsUseCase.swift */; };
 		CE0D2DA2274C415D001AAAB5 /* RetryFetchDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D2DA1274C415D001AAAB5 /* RetryFetchDataUseCase.swift */; };
-		CE0D2DA4274C53C0001AAAB5 /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D2DA3274C53C0001AAAB5 /* UIFont+Custom.swift */; };
+		CE0D2DA4274C53C0001AAAB5 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D2DA3274C53C0001AAAB5 /* UIFont+Extensions.swift */; };
 		CE983E99274911970012C026 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983E98274911970012C026 /* AppDelegate.swift */; };
 		CE983E9B274911970012C026 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983E9A274911970012C026 /* SceneDelegate.swift */; };
 		CE983E9D274911970012C026 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983E9C274911970012C026 /* ViewController.swift */; };
@@ -42,6 +42,9 @@
 		CE983EF6274968D40012C026 /* AssetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983EF4274968D40012C026 /* AssetsTableViewCell.swift */; };
 		CE983EF7274968D40012C026 /* AssetsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE983EF5274968D40012C026 /* AssetsTableViewCell.xib */; };
 		CE983EF827496B300012C026 /* Mastrerdata.json in Sources */ = {isa = PBXBuildFile; fileRef = CE983ECB274913A10012C026 /* Mastrerdata.json */; };
+		CEA1F479274CFE2E00E3AEC6 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1F478274CFE2E00E3AEC6 /* Wallet.swift */; };
+		CEA1F47B274CFE5500E3AEC6 /* Commodity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1F47A274CFE5500E3AEC6 /* Commodity.swift */; };
+		CEDB4148274D951E00424AAA /* TestUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB4147274D951E00424AAA /* TestUseCases.swift */; };
 		F52C1E86A863BAE6A25AF77A /* Pods_Bitpanda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443EA31DF9A68268642C88D3 /* Pods_Bitpanda.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,8 +75,8 @@
 		636BC4DC0AE054170296A0D0 /* Pods_BitpandaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitpandaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E094B15794B10064AA6EDBA /* Pods-BitpandaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitpandaTests.release.xcconfig"; path = "Target Support Files/Pods-BitpandaTests/Pods-BitpandaTests.release.xcconfig"; sourceTree = "<group>"; };
 		98AFCE4A531AFC631F1D2560 /* Pods-Bitpanda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitpanda.release.xcconfig"; path = "Target Support Files/Pods-Bitpanda/Pods-Bitpanda.release.xcconfig"; sourceTree = "<group>"; };
-		CE0D2D90274C1D86001AAAB5 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
-		CE0D2D92274C223B001AAAB5 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		CE0D2D90274C1D86001AAAB5 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		CE0D2D92274C223B001AAAB5 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		CE0D2D95274C2FCB001AAAB5 /* GetCryptocoinsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCryptocoinsUseCase.swift; sourceTree = "<group>"; };
 		CE0D2D97274C3000001AAAB5 /* GetWalletsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWalletsUseCase.swift; sourceTree = "<group>"; };
 		CE0D2D99274C3015001AAAB5 /* GetCommoditiesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommoditiesUseCase.swift; sourceTree = "<group>"; };
@@ -81,7 +84,7 @@
 		CE0D2D9D274C304C001AAAB5 /* GetFiatWalletsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFiatWalletsUseCase.swift; sourceTree = "<group>"; };
 		CE0D2D9F274C3074001AAAB5 /* GetFiatsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFiatsUseCase.swift; sourceTree = "<group>"; };
 		CE0D2DA1274C415D001AAAB5 /* RetryFetchDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryFetchDataUseCase.swift; sourceTree = "<group>"; };
-		CE0D2DA3274C53C0001AAAB5 /* UIFont+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
+		CE0D2DA3274C53C0001AAAB5 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		CE983E95274911970012C026 /* Bitpanda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitpanda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE983E98274911970012C026 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE983E9A274911970012C026 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +111,9 @@
 		CE983EF127495F8B0012C026 /* DataRetrieverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRetrieverService.swift; sourceTree = "<group>"; };
 		CE983EF4274968D40012C026 /* AssetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsTableViewCell.swift; sourceTree = "<group>"; };
 		CE983EF5274968D40012C026 /* AssetsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssetsTableViewCell.xib; sourceTree = "<group>"; };
+		CEA1F478274CFE2E00E3AEC6 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		CEA1F47A274CFE5500E3AEC6 /* Commodity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commodity.swift; sourceTree = "<group>"; };
+		CEDB4147274D951E00424AAA /* TestUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUseCases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,14 +157,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		CE0D2D8F274C1D72001AAAB5 /* Extensions */ = {
+		CE0D2D8F274C1D72001AAAB5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				CE0D2D90274C1D86001AAAB5 /* UIColor+Custom.swift */,
-				CE0D2D92274C223B001AAAB5 /* String+Localized.swift */,
-				CE0D2DA3274C53C0001AAAB5 /* UIFont+Custom.swift */,
+				CE0D2D90274C1D86001AAAB5 /* UIColor+Extensions.swift */,
+				CE0D2D92274C223B001AAAB5 /* String+Extensions.swift */,
+				CE0D2DA3274C53C0001AAAB5 /* UIFont+Extensions.swift */,
 			);
-			path = Extensions;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		CE0D2D94274C2C40001AAAB5 /* UseCases */ = {
@@ -200,17 +206,16 @@
 		CE983E97274911970012C026 /* Bitpanda */ = {
 			isa = PBXGroup;
 			children = (
+				CE983E9A274911970012C026 /* SceneDelegate.swift */,
+				CE983E98274911970012C026 /* AppDelegate.swift */,
+				CE983EA6274911980012C026 /* Info.plist */,
 				CE0D2D94274C2C40001AAAB5 /* UseCases */,
-				CE0D2D8F274C1D72001AAAB5 /* Extensions */,
+				CE0D2D8F274C1D72001AAAB5 /* Utils */,
 				CE983EE0274953EC0012C026 /* Services */,
 				CE983ECD274914080012C026 /* Views */,
 				CE983ECA274912560012C026 /* ViewModels */,
 				CE983EC92749124F0012C026 /* Models */,
 				CE983EC8274912070012C026 /* Resources */,
-				CE983E98274911970012C026 /* AppDelegate.swift */,
-				CE983E9A274911970012C026 /* SceneDelegate.swift */,
-				CE983EA3274911980012C026 /* LaunchScreen.storyboard */,
-				CE983EA6274911980012C026 /* Info.plist */,
 			);
 			path = Bitpanda;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				CE983EAF274911980012C026 /* BitpandaTests.swift */,
+				CEDB4147274D951E00424AAA /* TestUseCases.swift */,
 			);
 			path = BitpandaTests;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 		CE983EC8274912070012C026 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE983EA3274911980012C026 /* LaunchScreen.storyboard */,
 				CE983EA1274911980012C026 /* Assets.xcassets */,
 				CE983ECB274913A10012C026 /* Mastrerdata.json */,
 			);
@@ -246,6 +253,8 @@
 			children = (
 				CE983EE527495A1D0012C026 /* CodableModels.swift */,
 				CE983EE727495A3B0012C026 /* Asset.swift */,
+				CEA1F478274CFE2E00E3AEC6 /* Wallet.swift */,
+				CEA1F47A274CFE5500E3AEC6 /* Commodity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -544,25 +553,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA1F479274CFE2E00E3AEC6 /* Wallet.swift in Sources */,
 				CE0D2D9C274C303A001AAAB5 /* GetCommodityWallets.swift in Sources */,
-				CE0D2D91274C1D86001AAAB5 /* UIColor+Custom.swift in Sources */,
+				CE0D2D91274C1D86001AAAB5 /* UIColor+Extensions.swift in Sources */,
 				CE983EDB2749536C0012C026 /* WalletsViewModel.swift in Sources */,
 				CE983ED6274937040012C026 /* WalletsScreenViewController.swift in Sources */,
 				CE983E9D274911970012C026 /* ViewController.swift in Sources */,
 				CE0D2D9A274C3015001AAAB5 /* GetCommoditiesUseCase.swift in Sources */,
 				CE983EE827495A3B0012C026 /* Asset.swift in Sources */,
 				CE983ED2274936D40012C026 /* AssetsScreenViewController.swift in Sources */,
-				CE0D2DA4274C53C0001AAAB5 /* UIFont+Custom.swift in Sources */,
+				CE0D2DA4274C53C0001AAAB5 /* UIFont+Extensions.swift in Sources */,
 				CE983EF227495F8B0012C026 /* DataRetrieverService.swift in Sources */,
 				CE983EF6274968D40012C026 /* AssetsTableViewCell.swift in Sources */,
 				CE983EE4274957BD0012C026 /* MastrerDataService.swift in Sources */,
-				CE0D2D93274C223B001AAAB5 /* String+Localized.swift in Sources */,
+				CE0D2D93274C223B001AAAB5 /* String+Extensions.swift in Sources */,
 				CE0D2DA2274C415D001AAAB5 /* RetryFetchDataUseCase.swift in Sources */,
 				CE0D2D98274C3000001AAAB5 /* GetWalletsUseCase.swift in Sources */,
 				CE983EE627495A1D0012C026 /* CodableModels.swift in Sources */,
 				CE983ED92749532A0012C026 /* AssetsViewModel.swift in Sources */,
 				CE0D2D9E274C304C001AAAB5 /* GetFiatWalletsUseCase.swift in Sources */,
 				CE0D2D96274C2FCB001AAAB5 /* GetCryptocoinsUseCase.swift in Sources */,
+				CEA1F47B274CFE5500E3AEC6 /* Commodity.swift in Sources */,
 				CE0D2DA0274C3074001AAAB5 /* GetFiatsUseCase.swift in Sources */,
 				CE983E99274911970012C026 /* AppDelegate.swift in Sources */,
 				CE983E9B274911970012C026 /* SceneDelegate.swift in Sources */,
@@ -574,6 +585,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDB4148274D951E00424AAA /* TestUseCases.swift in Sources */,
 				CE983EB0274911980012C026 /* BitpandaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -804,6 +816,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8U69XXMXZC;
@@ -830,6 +843,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8U69XXMXZC;

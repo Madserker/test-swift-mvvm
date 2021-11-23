@@ -12,9 +12,14 @@ class WalletsScreenViewController: UIViewController {
     @IBOutlet var generalView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-    let assetsCell = "AssetsTableViewCell"
+    private let assetsCell = "AssetsTableViewCell"
     
-    let viewModel = WalletsViewModel()
+    private let viewModel = WalletsViewModel(
+        getWalletsUseCase: GetWalletsUseCase(),
+        getCommodityWalletsUseCase: GetCommodityWalletsUseCase(),
+        getFiatWalletsUseCase: GetFiatWalletsUseCase(),
+        retryFetchDataUseCase: RetryFetchDataUseCase()
+    )
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +46,7 @@ class WalletsScreenViewController: UIViewController {
     }
     
     private func setupUI() {
-        generalView.backgroundColor = UIColor.primary
+        generalView.backgroundColor = UIColor.secondary
     }
     
     private func setupTableView() {

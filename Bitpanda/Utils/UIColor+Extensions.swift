@@ -11,6 +11,9 @@ import UIKit
 extension UIColor {
     static let primary = UIColor(named: "Primary")
     static let secondary = UIColor(named: "Secondary")
-    static let cellCapsule = UIColor(named: "CellCapsule")
-    static let appGrey = UIColor.darkGray
+    static let cell = UIColor(named: "CellCapsule")
+    static let cellNumber = UIColor(named: "CellNumber")
+    static let cellText = UIColor(named: "CellText")
+    static let appText = UIColor(named: "AppText")
+
 }
