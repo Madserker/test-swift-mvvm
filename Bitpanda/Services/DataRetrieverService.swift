@@ -21,7 +21,7 @@ class DataRetrieverError: Error {
     }
 }
 
-class DataRetrieverService {
+final class DataRetrieverService {
     
     public static func fetchData<T: Codable>(type: T.Type, resourceName: String) -> Result<T,DataRetrieverError> {
         if let path = Bundle.main.path(forResource: resourceName, ofType: "json") {

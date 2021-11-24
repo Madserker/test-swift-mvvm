@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MastrerDataService {
+final class MastrerDataService {
      
     static let shared = MastrerDataService()
     
